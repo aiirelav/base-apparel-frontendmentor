@@ -1,0 +1,155 @@
+	@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap');
+
+  	html {
+  	 	font-size: 100%;
+  	 	font-family: 'Josefin Sans', sans-serif;
+  	 	line-height: 1.2;
+  	}
+
+  	html, body {
+  	 	margin: 0;
+  	 	padding: 0;
+  	 	box-sizing: border-box;
+  	}
+
+    .container {
+      height: 100vh;
+      background: url('../images/bg-pattern-desktop.svg') center no-repeat;
+      background-size: cover;
+      display: grid;
+      grid-template-columns: 58% 42%;
+      grid-template-rows: auto;
+      grid-template-areas: "logo hero"
+                           "cta hero";
+    }
+     
+    .hero {
+      background: url('../images/hero-desktop.jpg') center no-repeat;
+      background-size: cover;
+      grid-area: hero;
+    }
+
+    .cta {
+      grid-area: cta;
+      padding: 0 20%;
+    }
+
+    .logo {
+      grid-area: logo;
+      padding: 4rem 0 4rem 20% ;
+    }
+
+    h1{
+      font-size: 4rem;
+      font-weight: 300;
+      color: #c79e9c;
+      letter-spacing: 1rem;
+      text-transform: uppercase;
+      margin: 0;
+     }
+
+     h1 span {
+      font-weight: 600;
+      color: #433a3b;
+      display: block;
+     }
+
+     input:focus, button:focus{
+      outline: none;
+     }
+
+    .description {
+      color: #be9a9c;
+      display: block;
+      line-height: 2rem;
+      font-weight: 400;
+      font-size: 1rem;
+      padding: 2rem 0;
+    }
+
+    form{
+     display: flex;
+     flex-direction: row;  
+     width: 100%;
+    }
+
+    #email{
+     margin: 0;
+     font-family: 'Josefin Sans', sans-serif;
+     border-radius: 5rem;
+     border: 1px solid #c79e9c;
+     width: 100%;
+     padding: 1rem 7rem 1rem 2rem;
+     background: transparent;
+     color: #c79e9c;
+     font-size: 1rem;
+     color: #433a3b;
+     box-sizing: border-box;
+    }
+    
+    #email::placeholder {
+     color: #c79e9c;
+     opacity: .8;
+     font-size: 1rem;
+    }
+
+    button {
+      background: linear-gradient(45deg, #f7b7b5, #ed9392);
+      border-radius: 5rem;
+      margin-left: -7rem;
+      padding: 1rem 2rem;
+      width: 7rem;
+      border: none;
+      filter: drop-shadow(0 1rem 1rem rgba(239, 159, 160, 0.5));
+      cursor: pointer;
+    }
+
+    button:hover{
+      background: linear-gradient(45deg, #fcdadb, #f7c9c9);
+    }
+
+    #error{
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-left: -9rem;
+      align-self: center;
+      visibility: hidden;
+    }
+
+    #message {
+      color: #f95f61; 
+      font-size: 1rem;
+      padding-left: 2rem;
+      visibility: hidden;
+    }
+
+    @media (max-width: 930px) {
+        
+    .container {
+      grid-template-columns: 100%;
+      grid-template-rows: auto;
+      grid-template-areas:  "logo" "hero" "cta";
+      background-color: #fff;       
+    }
+
+    .cta {
+      padding: 6rem 3rem;
+      text-align: center;
+      background: linear-gradient(0deg, #fff4f4, #fefaf9);   
+    }
+
+    .logo {
+      padding: 2rem 2rem;
+    }
+
+    .hero {
+      background: url('../images/hero-mobile.jpg') center no-repeat;
+      background-size: 100%;
+      height: 0;
+      padding-top: 66.666666%;
+    }
+
+    #message {
+      text-align: left;
+    }
+    }
